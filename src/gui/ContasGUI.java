@@ -36,8 +36,8 @@ public class ContasGUI extends javax.swing.JFrame {
      */
     public ContasGUI() {
         initComponents();
-        setResizable(false);
-        setLocationRelativeTo(null);
+        setResizable(false);//não poder mecher a tela
+        setLocationRelativeTo(null);// iniciar o sistema no centro da tela
     }
 
     /**
