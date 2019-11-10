@@ -1,20 +1,9 @@
-/*
-Nome: Bruno Domingues, Dêner Ribeiro, Gustavo Veronez, Tayane Lopes.
-Turma: TI-167.
-Descrição: Sistema para fazer cadastro em banco de dados das contas à pagar da empresa.
-Data de Termino: 24/08/2015.
 
-*/
 package modelo;
 
 import java.util.Date;
 
 
-
-/**
- *
- * @author GRUPO 2 JSE1
- */
 public class Contas {
     //variaveis necessárias para inserir no banco de dados
     private int boletoCod;
