@@ -67,6 +67,7 @@ public class ContasDAO {
      }
      //método que faz a consulta do código do boleto no banco de dados
      public boolean Consulta(String consulta) throws SQLException{
+        boolean valido = true;
          boolean find = true;
         try{
             ResultSet rs;
@@ -90,7 +91,7 @@ public class ContasDAO {
             return find;
             
         }catch(SQLException e){
-            find = false;
+            valido = false;
             JOptionPane.showMessageDialog(null, e );            
         }
         return find;

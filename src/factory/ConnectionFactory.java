@@ -17,8 +17,7 @@ public class ConnectionFactory {
     public Connection getConnection(){
         String url = "jdbc:mysql://localhost/cadastro_pagamento";
         String uid = "root";
-        //String pass = "Senac*123";
-        String pass = "w5625662";
+        String pass = "password";
         
         try{
             return DriverManager.getConnection(url, uid, pass);
