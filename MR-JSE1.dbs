@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<project name="Cadastro_Pagamento" id="Project_3223a0" html="y" template="Default" database="MySql" >
+	<schema name="cadastro_pagamento" schemaname="cadastro_pagamento" >
+		<table name="tb_acrecimo" >
+			<column name="acrecimo_multa" type="varchar" length="20" jt="12" mandatory="y" />
+			<column name="acrecimo_juros" type="varchar" length="20" jt="12" mandatory="y" />
+			<column name="fk_boleto_cod" type="int" jt="4" mandatory="y" />
+			<column name="acrecimo_novo_valor" type="varchar" length="100" jt="12" mandatory="y" />
+			<index name="idx_tb_acrecimo" unique="NORMAL" >
+				<column name="fk_boleto_cod" />
+			</index>
+			<fk name="fk_tb_acrecimo" to_schema="cadastro_pagamento" to_table="tb_boleto" >
+				<fk_column name="fk_boleto_cod" pk="boleto_cod" />
+			</fk>
+			<storage><![CDATA[engine=InnoDB]]></storage>
+		</table>
+		<table name="tb_boleto" >
+			<column name="boleto_cod" type="int" jt="4" mandatory="y" />
+			<column name="boleto_valor" type="varchar" length="20" jt="12" mandatory="y" />
+			<column name="boleto_data_vencimento" type="varchar" length="20" jt="12" mandatory="y" />
+			<index name="pk_tb_boleto" unique="PRIMARY_KEY" >
+				<column name="boleto_cod" />
+			</index>
+			<storage><![CDATA[engine=InnoDB]]></storage>
+		</table>
+	</schema>
+	<layout id="Layout_3223af" name="Cadastro_Pagamento" show_relation_columns="y" >
+		<entity schema="cadastro_pagamento" name="tb_acrecimo" color="b2cdf7" x="285" y="45" />
+		<entity schema="cadastro_pagamento" name="tb_boleto" color="b2cdf7" x="45" y="45" />
+	</layout>
+</project>
